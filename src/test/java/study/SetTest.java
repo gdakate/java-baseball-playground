@@ -1,18 +1,15 @@
 package study;
 
-import static org.assertj.core.api.AssertionsForClassTypes.*;
-
-import java.util.HashSet;
-import java.util.Set;
-
-import org.assertj.core.internal.Numbers;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import jdk.internal.joptsimple.internal.Strings;
+import java.util.HashSet;
+import java.util.Set;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SetTest {
 	private Set<Integer> numbers;
@@ -33,8 +30,8 @@ public class SetTest {
 	}
 
 	@ParameterizedTest
-	@ValueSource(ints ={1,2,3} )
+	@ValueSource(ints ={1,2,3})
 	void contains(int number){
-		Assertions.assertTrue();
+		assertTrue(numbers.contains(number));
 	}
 }
